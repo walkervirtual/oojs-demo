@@ -28,7 +28,7 @@ ninja2.hasMask = true;
 Ninja.prototype.wearsBlack = true;
 
 function MountedNinja(){
-  ridesHorse: true;
+  this.ridesHorse = true;
 }
 
 MountedNinja.prototype = new Ninja(4);
