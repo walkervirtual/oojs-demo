@@ -18,4 +18,19 @@ function Ninja(stars){
   };
 }
 
-var ninja_instance = new Ninja(4);
+var ninja1 = new Ninja(4);
+var ninja2 = new Ninja(1);
+
+//this will not alter ninja1
+ninja2.hasMask = true;
+
+//this will alter both ninjas and all future ninjas
+Ninja.prototype.wearsBlack = true;
+
+function MountedNinja(){
+  ridesHorse: true;
+}
+
+MountedNinja.prototype = new Ninja(4);
+
+rider = new MountedNinja();
